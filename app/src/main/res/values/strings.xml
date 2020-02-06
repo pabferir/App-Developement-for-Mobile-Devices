@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">DashboardActivity</string>
+
+    <string name="shake_activity_name">Quotation Shake</string>
+    <string name="random_activity_name">Random Quotations</string>
+    <string name="favs_activity_name">Favourite Quotations</string>
+    <string name="settings_activity_name">Settings</string>
+    <string name="about_activity_name">About</string>
+
+    <string name="dboard_label_b1">Get quotations</string>
+    <string name="dboard_label_b2">Favourite quotations</string>
+    <string name="dboard_label_b3">Settings</string>
+    <string name="dboard_label_b4">About</string>
+</resources>
