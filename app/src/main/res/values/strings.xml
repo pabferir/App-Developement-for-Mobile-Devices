@@ -20,4 +20,6 @@
     <string name="settings_label_tv3">HTTP method</string>
     <string name="settings_label_rd1">GET</string>
     <string name="settings_label_rd2">POST</string>
+
+    <string name="favs_label_b1">Author info</string>
 </resources>
