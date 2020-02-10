@@ -13,7 +13,7 @@
             android:windowSoftInputMode="stateAlwaysHidden"/>
         <activity android:name=".FavouriteActivity" android:label="@string/favs_activity_name"/>
         <activity android:name=".AboutActivity" android:label="@string/about_activity_name"/>
-        <activity android:name=".QuotationActivity" />
+        <activity android:name=".QuotationActivity" android:label="@string/random_activity_name"/>
         <activity android:name=".DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -20,6 +20,11 @@
     <string name="settings_label_tv3">HTTP method</string>
     <string name="settings_label_rd1">GET</string>
     <string name="settings_label_rd2">POST</string>
+    <string name="user_defaultName">Nameless One</string>
 
     <string name="favs_label_b1">Author info</string>
+
+    <string name="quotes_label_tv1">Hello %1s!\nPress Refresh to get a new quotation</string>
+    <string name="quotes_label_sampleQuote">This is a sample quotation</string>
+    <string name="quotes_label_sampleAuthor">This is a sample author</string>
 </resources>
