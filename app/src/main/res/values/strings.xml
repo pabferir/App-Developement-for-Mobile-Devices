@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DashboardActivity</string>
+    <string name="app_name" translatable="false">DashboardActivity</string>
 
     <string name="shake_activity_name">Quotation Shake</string>
     <string name="random_activity_name">Random Quotations</string>
@@ -18,8 +18,8 @@
     <string name="settings_label_et1">Insert your name...</string>
     <string name="settings_label_tv2">Quotations language</string>
     <string name="settings_label_tv3">HTTP method</string>
-    <string name="settings_label_rd1">GET</string>
-    <string name="settings_label_rd2">POST</string>
+    <string name="settings_label_rd1" translatable="false">GET</string>
+    <string name="settings_label_rd2" translatable="false">POST</string>
     <string name="user_defaultName">Nameless One</string>
 
     <string name="favs_label_b1">Author info</string>

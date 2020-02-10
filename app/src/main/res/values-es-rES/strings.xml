@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="about_activity_name">Acerca de</string>
+    <string name="about_label_credits">Quotation Shake por\npabferir\n2020</string>
+    <string name="dboard_label_b1">Obtener citas</string>
+    <string name="dboard_label_b2">Citas favoritas</string>
+    <string name="dboard_label_b3">Ajustes</string>
+    <string name="dboard_label_b4">Acerca De</string>
+    <string name="favs_activity_name">Citas Favoritas</string>
+    <string name="favs_label_b1">Información sobre el autor</string>
+    <string name="quotes_label_sampleAuthor">Esto es un autor de prueba</string>
+    <string name="quotes_label_sampleQuote">Esta es una cita de prueba</string>
+    <string name="quotes_label_tv1">¡Hola %1s!\nPulsa Refrescar para obtener una nueva cita</string>
+    <string name="random_activity_name">Citas Aleatorias</string>
+    <string name="settings_activity_name">Ajustes</string>
+    <string name="settings_label_et1">Inserta tu nombre...</string>
+    <string name="settings_label_tv1">Nombre del usuario</string>
+    <string name="settings_label_tv2">Idioma de las citas</string>
+    <string name="settings_label_tv3">Método HTTP</string>
+    <string name="user_defaultName">El Sin Nombre</string>
+    <string name="shake_activity_name">Batido de Citas</string>
+</resources>
