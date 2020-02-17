@@ -1,4 +1,4 @@
-package com.pabferir.quotation;
+package com.pabferir.adapters;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,25 +8,35 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.pabferir.classes.Quotation;
 import com.pabferir.dashboardactivity.R;
 
 import java.util.List;
 
 public class Intermediary extends RecyclerView.Adapter<Intermediary.ViewHolder> {
     private List<Quotation> quotationList;
+    private OnItemClickListener onItemClickListener;
 
-    public Intermediary(List<Quotation> quotationList) {
+    public Intermediary(List<Quotation> quotationList, OnItemClickListener onItemClickListener) {
         this.quotationList = quotationList;
+        this.onItemClickListener = onItemClickListener;
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView quotationText;
         public TextView quotationAuthor;
 
-        public ViewHolder(View view) {
+        public ViewHolder(View view, final OnItemClickListener onItemClickListener) {
             super(view);
             this.quotationText = (TextView) view.findViewById(R.id.quoteText_label);
             this.quotationAuthor = (TextView) view.findViewById(R.id.quoteAuthor_label);
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemClickListener.onItemClickListener(getAdapterPosition());
+                }
+            });
         }
     }
 
@@ -36,7 +46,7 @@ public class Intermediary extends RecyclerView.Adapter<Intermediary.ViewHolder> 
         View view = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.quotation_list_row, parent, false
         );
-        Intermediary.ViewHolder holder = new ViewHolder(view);
+        Intermediary.ViewHolder holder = new ViewHolder(view, onItemClickListener);
         return holder;
     }
 
@@ -49,5 +59,13 @@ public class Intermediary extends RecyclerView.Adapter<Intermediary.ViewHolder> 
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.quotationText.setText(quotationList.get(position).getQuoteText());
         holder.quotationAuthor.setText(quotationList.get(position).getQuoteAuthor());
+    }
+
+    public String getAuthorByListPosition(int position) {
+        return quotationList.get(position).getQuoteAuthor();
+    }
+
+    public interface OnItemClickListener {
+        void onItemClickListener(int position);
     }
 }

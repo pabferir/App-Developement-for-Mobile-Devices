@@ -9,12 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivity" android:label="@string/settings_activity_name"
+        <activity android:name="com.pabferir.activities.SettingsActivity" android:label="@string/settings_activity_name"
             android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity android:name=".FavouriteActivity" android:label="@string/favs_activity_name"/>
-        <activity android:name=".AboutActivity" android:label="@string/about_activity_name"/>
-        <activity android:name=".QuotationActivity" android:label="@string/random_activity_name"/>
-        <activity android:name=".DashboardActivity">
+        <activity android:name="com.pabferir.activities.FavouriteActivity" android:label="@string/favs_activity_name"/>
+        <activity android:name="com.pabferir.activities.AboutActivity" android:label="@string/about_activity_name"/>
+        <activity android:name="com.pabferir.activities.QuotationActivity" android:label="@string/random_activity_name"/>
+        <activity android:name="com.pabferir.activities.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

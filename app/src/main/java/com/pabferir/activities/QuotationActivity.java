@@ -1,10 +1,12 @@
-package com.pabferir.dashboardactivity;
+package com.pabferir.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.pabferir.dashboardactivity.R;
 
 public class QuotationActivity extends AppCompatActivity {
 

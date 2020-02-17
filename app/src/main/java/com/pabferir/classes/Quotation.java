@@ -1,4 +1,4 @@
-package com.pabferir.quotation;
+package com.pabferir.classes;
 
 public class Quotation {
     private String quoteText;
