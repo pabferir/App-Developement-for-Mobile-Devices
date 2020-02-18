@@ -16,28 +16,21 @@ import java.util.List;
 public class Intermediary extends RecyclerView.Adapter<Intermediary.ViewHolder> {
     private List<Quotation> quotationList;
     private OnItemClickListener onItemClickListener;
+    private OnItemLongClickListener onItemLongClickListener;
 
-    public Intermediary(List<Quotation> quotationList, OnItemClickListener onItemClickListener) {
+    public Intermediary(
+            List<Quotation> quotationList,
+            OnItemClickListener onItemClickListener,
+            OnItemLongClickListener onItemLongClickListener
+    ) {
         this.quotationList = quotationList;
         this.onItemClickListener = onItemClickListener;
+        this.onItemLongClickListener = onItemLongClickListener;
     }
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView quotationText;
-        public TextView quotationAuthor;
-
-        public ViewHolder(View view, final OnItemClickListener onItemClickListener) {
-            super(view);
-            this.quotationText = (TextView) view.findViewById(R.id.quoteText_label);
-            this.quotationAuthor = (TextView) view.findViewById(R.id.quoteAuthor_label);
-
-            view.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    onItemClickListener.onItemClickListener(getAdapterPosition());
-                }
-            });
-        }
+    public void removeItemByPosition(int position) {
+        quotationList.remove(position);
+        notifyItemRemoved(position);
     }
 
     @NonNull
@@ -46,7 +39,8 @@ public class Intermediary extends RecyclerView.Adapter<Intermediary.ViewHolder> 
         View view = LayoutInflater.from(parent.getContext()).inflate(
                 R.layout.quotation_list_row, parent, false
         );
-        Intermediary.ViewHolder holder = new ViewHolder(view, onItemClickListener);
+        Intermediary.ViewHolder holder = new ViewHolder(
+                view, onItemClickListener, onItemLongClickListener);
         return holder;
     }
 
@@ -67,5 +61,39 @@ public class Intermediary extends RecyclerView.Adapter<Intermediary.ViewHolder> 
 
     public interface OnItemClickListener {
         void onItemClickListener(int position);
+    }
+
+    public interface OnItemLongClickListener {
+        void onItemLongClickListener(int position);
+    }
+
+    public static class ViewHolder extends RecyclerView.ViewHolder {
+        public TextView quotationText;
+        public TextView quotationAuthor;
+
+        public ViewHolder(
+                View view,
+                final OnItemClickListener onItemClickListener,
+                final OnItemLongClickListener onItemLongClickListener
+        ) {
+            super(view);
+            this.quotationText = (TextView) view.findViewById(R.id.quoteText_label);
+            this.quotationAuthor = (TextView) view.findViewById(R.id.quoteAuthor_label);
+
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    onItemClickListener.onItemClickListener(getAdapterPosition());
+                }
+            });
+
+            view.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    onItemLongClickListener.onItemLongClickListener(getAdapterPosition());
+                    return false;
+                }
+            });
+        }
     }
 }

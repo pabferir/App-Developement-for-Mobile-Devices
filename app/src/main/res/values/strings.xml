@@ -23,6 +23,8 @@
     <string name="user_defaultName">Nameless One</string>
 
     <string name="favs_label_b1">Author info</string>
+    <string name="favs_dialog_title">Remove Quotation</string>
+    <string name="favs_dialog_message">Are you sure you want to remove this quotation from your favourites list?</string>
 
     <string name="quotes_label_tv1">Hello %1s!\nPress Refresh to get a new quotation</string>
     <string name="quotes_label_sampleQuote">This is a sample quotation</string>
