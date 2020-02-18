@@ -9,12 +9,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.pabferir.activities.SettingsActivity" android:label="@string/settings_activity_name"
-            android:windowSoftInputMode="stateAlwaysHidden"/>
-        <activity android:name="com.pabferir.activities.FavouriteActivity" android:label="@string/favs_activity_name"/>
-        <activity android:name="com.pabferir.activities.AboutActivity" android:label="@string/about_activity_name"/>
-        <activity android:name="com.pabferir.activities.QuotationActivity" android:label="@string/random_activity_name"/>
-        <activity android:name="com.pabferir.activities.DashboardActivity">
+        <activity
+            android:name="com.pabferir.activities.SettingsActivity"
+            android:label="@string/settings_activity_name"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            android:parentActivityName="com.pabferir.activities.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pabferir.activities.DashboardActivity"/>
+        </activity>
+        <activity
+            android:name="com.pabferir.activities.FavouriteActivity"
+            android:label="@string/favs_activity_name"
+            android:parentActivityName="com.pabferir.activities.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pabferir.activities.DashboardActivity"/>
+        </activity>
+        <activity
+            android:name="com.pabferir.activities.AboutActivity"
+            android:label="@string/about_activity_name"
+            android:parentActivityName="com.pabferir.activities.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pabferir.activities.DashboardActivity"/>
+        </activity>
+        <activity
+            android:name="com.pabferir.activities.QuotationActivity"
+            android:label="@string/random_activity_name"
+            android:parentActivityName="com.pabferir.activities.DashboardActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.pabferir.activities.DashboardActivity"/>
+        </activity>
+        <activity
+            android:name="com.pabferir.activities.DashboardActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
