@@ -5,3 +5,8 @@ Basic Android application to provide users with random quotations from a web ser
 ## Author
 
 This app has been developed by **Pablo Ferrando**.
+
+## What I learned
+
+* Android developement fundamentals.
+* Android basic UI design.
