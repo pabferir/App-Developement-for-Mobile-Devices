@@ -1,8 +1,11 @@
 package com.pabferir.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -20,6 +23,27 @@ public class QuotationActivity extends AppCompatActivity {
                 getResources().getString(R.string.user_defaultName));
 
         quotationView.setText(quote);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.quotation_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menu_add:
+                return true;
+
+            case R.id.menu_refresh:
+                newQuotation((TextView)findViewById(R.id.quotation_quote_tv));
+                return true;
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void newQuotation(View v) {

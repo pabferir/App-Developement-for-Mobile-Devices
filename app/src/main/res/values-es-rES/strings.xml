@@ -21,4 +21,6 @@
     <string name="shake_activity_name">Batido de Citas</string>
     <string name="favs_dialog_message">¿Seguro que desea eliminar esta cita de su lista de favoritas?</string>
     <string name="favs_dialog_title">Eliminar Cita</string>
+    <string name="menu_item_add">Añadir</string>
+    <string name="menu_item_refresh">Refrescar</string>
 </resources>
