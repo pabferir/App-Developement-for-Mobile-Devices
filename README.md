@@ -1,6 +1,6 @@
 # **App Developement for Mobile Devices Coursework**
 
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/pabferir/App-Developement-for-Mobile-Devices?include_prereleases)
+[![Release](https://img.shields.io/github/v/release/pabferir/App-Developement-for-Mobile-Devices?include_prereleases)](https://github.com/pabferir/App-Developement-for-Mobile-Devices/releases)
 
 Basic Android application to provide users with random quotations from a web service. Coursework for lab sessions of subject in Universidad Politécnica de Valencia.
 
