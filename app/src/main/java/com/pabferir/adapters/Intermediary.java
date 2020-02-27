@@ -1,6 +1,7 @@
 package com.pabferir.adapters;
 
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -31,6 +32,11 @@ public class Intermediary extends RecyclerView.Adapter<Intermediary.ViewHolder> 
     public void removeItemByPosition(int position) {
         quotationList.remove(position);
         notifyItemRemoved(position);
+    }
+
+    public void removeAllItems() {
+        quotationList.clear();
+        notifyDataSetChanged();
     }
 
     @NonNull

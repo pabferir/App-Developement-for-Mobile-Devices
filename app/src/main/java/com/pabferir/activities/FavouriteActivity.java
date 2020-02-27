@@ -1,5 +1,6 @@
 package com.pabferir.activities;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
@@ -10,6 +11,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 
 import com.pabferir.adapters.Intermediary;
 import com.pabferir.classes.Quotation;
@@ -68,6 +71,39 @@ public class FavouriteActivity extends AppCompatActivity {
         );
         recycler.setAdapter(intermediary);
         recycler.addItemDecoration(decoration);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.favourites_menu, menu);
+        if(intermediary.getItemCount() == 0) {
+            MenuItem clear = menu.findItem(R.id.menu_delete_all);
+            clear.setVisible(false);
+        }
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
+        switch(item.getItemId()){
+            case R.id.menu_delete_all:
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setIcon(android.R.drawable.stat_sys_warning);
+                builder.setTitle(R.string.menu_item_delete_all_dialog_title);
+                builder.setMessage(R.string.menu_item_delete_all_dialog_message);
+                builder.setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        intermediary.removeAllItems();
+                        item.setVisible(false);
+                    }
+                });
+                builder.setNegativeButton(android.R.string.no, null);
+                builder.create().show();
+
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
     public void getAuthorInfo(int position) {

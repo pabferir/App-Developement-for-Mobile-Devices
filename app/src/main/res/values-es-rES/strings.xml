@@ -23,4 +23,7 @@
     <string name="favs_dialog_title">Eliminar Cita</string>
     <string name="menu_item_add">Añadir</string>
     <string name="menu_item_refresh">Refrescar</string>
+    <string name="menu_item_delete_all">Borrar todas</string>
+    <string name="menu_item_delete_all_dialog_title">Eliminar Todas las Citas</string>
+    <string name="menu_item_delete_all_dialog_message">¿Seguro que desea eliminar TODAS las citas de su lista de favoritas?</string>
 </resources>

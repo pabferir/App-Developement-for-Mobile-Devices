@@ -32,4 +32,8 @@
 
     <string name="menu_item_add">Add</string>
     <string name="menu_item_refresh">Refresh</string>
+    <string name="menu_item_delete_all">Clear All</string>
+
+    <string name="menu_item_delete_all_dialog_title">Remove All Quotations</string>
+    <string name="menu_item_delete_all_dialog_message">Are you sure that you want to delete ALL your favourite quotations?</string>
 </resources>
